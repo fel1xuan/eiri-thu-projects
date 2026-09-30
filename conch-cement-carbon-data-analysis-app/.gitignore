@@ -1,0 +1,76 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local tools and operating-system metadata
+.DS_Store
+._*
+.vscode/
+.idea/
+
+# Build products and distribution archives
+build/
+dist/
+*.app/
+*.exe
+*.dmg
+*.pkg
+*.msi
+*.zip
+*.egg-info/
+.pyinstaller/
+pyinstaller-cache/
+transfer_windows/
+
+# User configuration; only portable templates belong in Git
+app_config.json
+app_config.local.*
+config/*
+!config/default_config.json
+!config/version.json
+config/*local*
+config/*backup*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Logs, real research data, and generated results
+*.log
+run_log.csv
+tmp/
+temp/
+outputs/
+output/
+*.xls
+*.xlsx
+*.xlsm
+*.csv
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+清华能源实习数据分析/
+
+# Local verification reports and private-path launch/test helpers
+/Mac*报告_*.txt
+/打包前检查报告_*.txt
+/日期范围*测试结果.json
+/*.command
+/scripts/run_source.sh
+/scripts/smoke_test_chart_and_mindmaps.py
+
+# Historical and authoring assets; final runtime resources remain tracked
+/assets/archive/
+/assets/xmind_source/

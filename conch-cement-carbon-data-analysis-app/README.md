@@ -1,4 +1,6 @@
-# 清华数据分析软件
+# Conch Cement Carbon Emission Data Analysis App
+
+Desktop application name: **清华数据分析软件**. The repository display name does not change the local application name, resources, or behavior.
 
 基于 **Python + PySide6** 的科研数据处理桌面软件，用于海螺水泥碳排放数据的提取、审核、核算、聚合与可视化。
 

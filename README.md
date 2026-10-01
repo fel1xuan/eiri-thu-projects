@@ -1,6 +1,6 @@
 # Research Projects at the Energy Internet Research Institute, Tsinghua University
 
-EIRI, THU · Research & Engineering Projects
+**EIRI, THU · Research & Engineering Projects**
 
 This repository documents selected research and engineering projects developed during my work at the Energy Internet Research Institute, Tsinghua University (EIRI, THU).
 
@@ -10,37 +10,45 @@ This is a personal project repository and is not an official repository of Tsing
 
 ### 1. Boiler Operating Condition Analysis
 
-Analysis and identification of boiler operating conditions using historical operational data. The workflow combines 15-minute records, checks data quality, selects adaptive detection parameters, identifies operating events and change points, and maps continuous operating-condition periods.
+Data-driven analysis and identification of boiler operating conditions using historical operational data.
+
+The workflow joins daily 15-minute records, checks data quality, matches required fields, constructs a complete timeline, and produces an analysis-ready summary. It then uses robust statistics, rule-based event detection, adaptive parameter calibration, change-point identification, and stability checks to divide continuous operating-condition periods and generate condition maps and evidence tables.
 
 [Project source and usage](boiler-operating-condition-analysis/README.md)
 
 ### 2. Conch Cement Carbon Data Analysis — Streamlit Prototype
 
-An early Streamlit-based web prototype for validating the carbon-emission data-processing workflow, path configuration, result inspection, charting, and user interaction.
+An early Streamlit-based web prototype used to validate the carbon-emission data-processing workflow and interaction design. It connects report extraction, low-frequency aggregation, second-level calculation, 15-minute aggregation, path configuration, result inspection, and charting in a browser-based interface.
+
+This directory is the historical **prototype**, not an API and not the current desktop application.
 
 [Prototype source and usage](conch-cement-streamlit-prototype/README.md)
 
 ### 3. Conch Cement Carbon Emission Data Analysis App
 
-A PySide6 desktop application developed from the earlier Streamlit prototype, integrating carbon-emission data processing, manual validation, calculation, anomaly detection, 15-minute aggregation, result inspection, and visualization.
+A PySide6 desktop application that turns the validated workflow into a standalone research tool with project configuration, automatic path detection, result preview, automatic validation, explicit manual review, background workflow execution, result inspection, 15-minute visualization, and run history.
 
-[Desktop application source and usage](conch-cement-carbon-data-analysis-app/README.md)
+[Desktop application source, screenshots, and documentation](conch-cement-carbon-data-analysis-app/README.md)
 
-## Software evolution
+## Software Evolution
 
-```text
-Conch Cement data-processing scripts
-                ↓
-      Streamlit Web Prototype
-                ↓
-   PySide6 Desktop Application
-                ↓
-       macOS / Windows delivery
+```mermaid
+flowchart LR
+    A[Python Data-processing Scripts] --> B[Streamlit Web Prototype]
+    B --> C[PySide6 Desktop Application]
+    C --> D[macOS / Windows Delivery]
 ```
 
-The delivery stage refers to tested desktop packaging workflows. Packaged applications and user data are not stored in this source repository.
+| Stage | Purpose |
+| --- | --- |
+| Scripts | Validate scientific calculations and file-processing steps |
+| Streamlit | Validate the end-to-end software workflow and interaction model |
+| PySide6 | Engineer the workflow into a structured local desktop application |
+| macOS / Windows | Prepare tested, platform-specific delivery builds |
 
-## Structure
+Packaged applications, local environments, user configuration, and research data are not stored in this source repository.
+
+## Repository Structure
 
 ```text
 eiri-thu-projects/
@@ -52,9 +60,9 @@ eiri-thu-projects/
 └── conch-cement-carbon-data-analysis-app/
 ```
 
-Each project includes its own scope, environment, and usage notes. Datasets, generated workbooks, user configurations, logs, environments, and packaged applications are intentionally excluded.
+Each project includes its own scope, environment, and usage notes. Data files are excluded due to project confidentiality and size considerations.
 
-## Research focus
+## Research Focus
 
 - Energy data analysis
 - Carbon-emission accounting
@@ -62,7 +70,7 @@ Each project includes its own scope, environment, and usage notes. Datasets, gen
 - Scientific software development
 - Data visualization
 
-## Organization and scope
+## Organization and Scope
 
 Energy Internet Research Institute, Tsinghua University (EIRI, THU).
 

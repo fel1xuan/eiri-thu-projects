@@ -2,25 +2,43 @@
 
 EIRI, THU · Research & Engineering Projects
 
-This repository contains personal research and engineering projects developed during work with the Energy Internet Research Institute, Tsinghua University (EIRI, THU), focusing on energy data analysis, carbon-emission accounting, industrial process analysis, and research software development.
+This repository documents selected research and engineering projects developed during my work at the Energy Internet Research Institute, Tsinghua University (EIRI, THU).
+
+This is a personal project repository and is not an official repository of Tsinghua University or EIRI.
 
 ## Projects
 
-### 1. Conch Cement Operating Condition Analysis
+### 1. Boiler Operating Condition Analysis
 
-Industrial operating-condition analysis for cement-production data. Two Python scripts combine 15-minute result files, generate overview plots, identify operating-condition changes, and export statistical summaries and condition maps.
+Analysis and identification of boiler operating conditions using historical operational data. The workflow combines 15-minute records, checks data quality, selects adaptive detection parameters, identifies operating events and change points, and maps continuous operating-condition periods.
 
-[Source and usage](conch-cement-operating-condition-analysis/README.md)
+[Project source and usage](boiler-operating-condition-analysis/README.md)
 
-### 2. Conch Cement Carbon Emission Data Analysis App
+### 2. Conch Cement Carbon Data Analysis — Streamlit Prototype
 
-A PySide6 desktop application for carbon-emission data processing, validation, calculation, and visualization.
+An early Streamlit-based web prototype for validating the carbon-emission data-processing workflow, path configuration, result inspection, charting, and user interaction.
 
-The workflow covers production-report extraction and manual review, low-frequency data aggregation, second-level carbon-emission calculation and anomaly detection, 15-minute aggregation, and result visualization.
+[Prototype source and usage](conch-cement-streamlit-prototype/README.md)
 
-Technology: Python, PySide6, pandas, NumPy, Matplotlib, openpyxl, xlrd, and optional PyInstaller packaging.
+### 3. Conch Cement Carbon Emission Data Analysis App
 
-[Source and usage](conch-cement-carbon-data-analysis-app/README.md)
+A PySide6 desktop application developed from the earlier Streamlit prototype, integrating carbon-emission data processing, manual validation, calculation, anomaly detection, 15-minute aggregation, result inspection, and visualization.
+
+[Desktop application source and usage](conch-cement-carbon-data-analysis-app/README.md)
+
+## Software evolution
+
+```text
+Conch Cement data-processing scripts
+                ↓
+      Streamlit Web Prototype
+                ↓
+   PySide6 Desktop Application
+                ↓
+       macOS / Windows delivery
+```
+
+The delivery stage refers to tested desktop packaging workflows. Packaged applications and user data are not stored in this source repository.
 
 ## Structure
 
@@ -29,11 +47,12 @@ eiri-thu-projects/
 ├── README.md
 ├── docs/
 │   └── MIGRATION.md
-├── conch-cement-operating-condition-analysis/
+├── boiler-operating-condition-analysis/
+├── conch-cement-streamlit-prototype/
 └── conch-cement-carbon-data-analysis-app/
 ```
 
-Each project has its own setup and usage instructions. Datasets, generated workbooks, user configurations, logs, environments, and packaged applications are intentionally excluded.
+Each project includes its own scope, environment, and usage notes. Datasets, generated workbooks, user configurations, logs, environments, and packaged applications are intentionally excluded.
 
 ## Research focus
 
